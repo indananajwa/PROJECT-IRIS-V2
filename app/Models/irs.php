@@ -24,4 +24,8 @@ class Irs extends Model
     ];
 
     public $timestamps = false;
+
+    public function mahasiswa(){
+        return $this->belongsTo(Mahasiswa::class, 'mahasiswa_id');
+    }
 }

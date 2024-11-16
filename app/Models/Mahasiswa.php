@@ -25,4 +25,12 @@ class Mahasiswa extends Model
         'alamat',
         'status',
     ];
+
+    public function jadwal(){
+        return $this->hasOne(Jadwal::class);
+    }
+
+    public function irs(){
+        return $this->hasOne(IRS::class, 'mahasiswa_id');
+    }
 }
